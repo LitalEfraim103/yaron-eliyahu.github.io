@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>צור קשר – ירון אליהו שמאות מקרקעין</title>
+  <meta name="description" content="צרו קשר עם ירון אליהו לתיאום פגישת ייעוץ ובחינת סיכונים. שמאות מקרקעין מקצועית, תיקוף שומות, ניהול סיכונים.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    /* Contact page specific overrides */
+    .contact-hero {
+      background: linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 100%);
+      padding: 148px 0 80px;
+      color: var(--white);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 10% 90%, rgba(127,181,204,0.2) 0%, transparent 50%),
+        radial-gradient(circle at 90% 10%, rgba(255,255,255,0.06) 0%, transparent 40%);
+    }
+
+    .contact-hero .container { position: relative; z-index: 1; }
+
+    /* Success message */
+    .form-success {
+      display: none;
+      background: #E8F8EF;
+      border: 1px solid #2ECC71;
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin-top: 16px;
+      color: #1A7A40;
+      font-weight: 600;
+      font-size: 0.95rem;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .form-success.show { display: flex; }
+
+    /* FAQ section */
+    .faq-section {
+      background: var(--bg-light);
+      padding: 90px 0;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: all var(--transition);
+    }
+
+    .faq-item:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-item h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .faq-item h4 i {
+      color: var(--primary-dark);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .faq-item p {
+      font-size: 0.92rem;
+      color: var(--text-gray);
+      line-height: 1.75;
+      padding-right: 28px;
+    }
+
+    @media (max-width: 768px) {
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <img src="LOGO.png" alt="ירון אליהו שמאות ויעוץ מקרקעין">
+      </a>
+      <ul class="navbar-links">
+        <li><a href="index.html">בית</a></li>
+        <li><a href="about.html">אודות</a></li>
+        <li><a href="services.html">שירותים</a></li>
+        <li><a href="contact.html" class="active">צור קשר</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <a href="tel:050-0000000" class="navbar-phone">
+          <i class="fas fa-phone-alt"></i>
+          050-000-0000
+        </a>
+        <a href="contact.html" class="btn btn-primary btn-sm">תיאום פגישת ייעוץ</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">בית</a>
+    <a href="about.html">אודות</a>
+    <a href="services.html">שירותים</a>
+    <a href="contact.html">צור קשר</a>
+    <a href="contact.html" class="btn btn-primary">תיאום פגישת ייעוץ</a>
+  </div>
+
+  <!-- ===== Contact Hero ===== -->
+  <header class="contact-hero">
+    <div class="container">
+      <div class="page-header-tag">צור קשר</div>
+      <h1 style="font-size:3rem; font-weight:800; margin-bottom:16px;">בואו נדבר</h1>
+      <p style="font-size:1.15rem; opacity:0.82; max-width:580px; margin:0 auto;">פנייה דיסקרטית ומקצועית — נשמח לבחון יחד כיצד ניתן לסייע לכם ולהגן על הארגון</p>
+
+      <!-- Quick contact strip -->
+      <div style="display:flex; justify-content:center; gap:32px; margin-top:40px; flex-wrap:wrap;">
+        <a href="tel:050-0000000" style="display:flex; align-items:center; gap:10px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); padding:12px 24px; border-radius:var(--radius-sm); color:white; font-weight:600; transition:all 0.3s; text-decoration:none;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+          <i class="fas fa-phone-alt"></i>
+          050-000-0000
+        </a>
+        <a href="mailto:info@yaron-realestate.co.il" style="display:flex; align-items:center; gap:10px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); padding:12px 24px; border-radius:var(--radius-sm); color:white; font-weight:600; transition:all 0.3s; text-decoration:none;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+          <i class="fas fa-envelope"></i>
+          info@yaron-realestate.co.il
+        </a>
+        <div style="display:flex; align-items:center; gap:10px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); padding:12px 24px; border-radius:var(--radius-sm); color:rgba(255,255,255,0.85); font-weight:600;">
+          <i class="fas fa-map-marker-alt"></i>
+          עומר, מחוז הנגב
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-inner">
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper animate-in">
+          <h2>שלחו פנייה</h2>
+          <p>מלאו את הפרטים ונחזור אליכם תוך 24 שעות — בדיסקרטיות מלאה</p>
+
+          <form id="contactForm" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">שם פרטי *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="ישראל" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">שם משפחה *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="ישראלי" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">טלפון *</label>
+                <input type="tel" id="phone" name="phone" placeholder="050-0000000" required>
+              </div>
+              <div class="form-group">
+                <label for="email">דוא"ל *</label>
+                <input type="email" id="email" name="email" placeholder="name@company.co.il" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="organization">ארגון / חברה</label>
+              <input type="text" id="organization" name="organization" placeholder="שם החברה / הארגון">
+            </div>
+
+            <div class="form-group">
+              <label for="role">תפקיד</label>
+              <select id="role" name="role">
+                <option value="">בחר תפקיד...</option>
+                <option value="ceo">מנכ"ל</option>
+                <option value="cfo">סמנכ"ל כספים (CFO)</option>
+                <option value="director">חבר דירקטוריון</option>
+                <option value="risk">מנהל סיכונים</option>
+                <option value="legal">יועץ משפטי</option>
+                <option value="investment">מנהל השקעות</option>
+                <option value="developer">יזם נדל"ן</option>
+                <option value="other">אחר</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="serviceType">סוג השירות המבוקש *</label>
+              <select id="serviceType" name="serviceType" required>
+                <option value="">בחר שירות...</option>
+                <option value="validation">תיקוף ובקרת שומות (קו הגנה שני)</option>
+                <option value="tax">בחינת שומות מס – היטל השבחה / רמ"י / הפקעה</option>
+                <option value="bank">שומה לבנק / מוסד פיננסי (תקן 19)</option>
+                <option value="balance">טבלת הקצאה ואיזון (תקן 15)</option>
+                <option value="other">שירות אחר / ייעוץ</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">תיאור הצורך *</label>
+              <textarea id="message" name="message" placeholder="תארו בקצרה את הנכס / השומה / הסוגייה שנדרשת הבחינה שלה. ניתן לשתף פרטים רלוונטיים — הכל מטופל בסודיות מלאה." required></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fas fa-paper-plane"></i>
+                שליחת הפנייה
+              </button>
+            </div>
+
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i>
+              <span>הפנייה נשלחה בהצלחה! נחזור אליכם תוך 24 שעות.</span>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Contact Info Sidebar -->
+        <div class="contact-info animate-in delay-2">
+          <h2>פרטי התקשרות</h2>
+          <p>ניתן לפנות בכל אמצעי תקשורת — נחזור אליכם בהקדם האפשרי</p>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-card-body">
+                <strong>טלפון</strong>
+                <a href="tel:050-0000000">050-000-0000</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div class="contact-card-body">
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/972500000000">שלחו הודעה ב-WhatsApp</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-card-body">
+                <strong>דוא"ל</strong>
+                <a href="mailto:info@yaron-realestate.co.il">info@yaron-realestate.co.il</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-card-body">
+                <strong>כתובת המשרד</strong>
+                <span>עומר, מחוז הנגב</span>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-card-body">
+                <strong>שעות פעילות</strong>
+                <span>ראשון – חמישי: 9:00–18:00<br>שישי: 9:00–13:00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Discretion Note -->
+          <div class="discretion-note">
+            <i class="fas fa-lock"></i>
+            <div>
+              <strong>פנייה דיסקרטית לחלוטין</strong><br>
+              כל פנייה מטופלת בסודיות מוחלטת. מתאים לפניות של דירקטורים, מנכ"לים, וגורמים בכירים שדורשים דיסקרטיות מלאה.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ Section ===== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header animate-in">
+        <div class="section-tag">שאלות נפוצות</div>
+        <h2 class="section-title">שאלות ותשובות</h2>
+        <p class="section-subtitle">תשובות לשאלות הנפוצות שמנהלים שואלים לפני הפנייה הראשונה</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item animate-in delay-1">
+          <h4>
+            <i class="fas fa-question-circle"></i>
+            מה ההבדל בין שמאי מבצע לשירות התיקוף שלכם?
+          </h4>
+          <p>השמאי המבצע ערך את השומה עבור הצד שהזמין אותה. שירות התיקוף הוא בדיקה בלתי תלויה ואובייקטיבית שנעשית עבור מקבל ההחלטות — כדי לוודא שהשומה תקינה ושניתן להסתמך עליה.</p>
+        </div>
+        <div class="faq-item animate-in delay-2">
+          <h4>
+            <i class="fas fa-question-circle"></i>
+            כמה זמן לוקח תהליך התיקוף?
+          </h4>
+          <p>תלוי במורכבות השומה והנכס. שומה סטנדרטית — בין 3–7 ימי עסקים. שומות מורכבות (פינוי בינוי, תכניות איחוד) — עד 3 שבועות. לעיתים ניתן לתת חוות דעת ראשונית מהירה תוך 24–48 שעות.</p>
+        </div>
+        <div class="faq-item animate-in delay-3">
+          <h4>
+            <i class="fas fa-question-circle"></i>
+            האם תיקוף שומה כולל ביקור בנכס?
+          </h4>
+          <p>לעיתים קרובות, ביקור בנכס הוא חלק מהתהליך ומוסיף ערך משמעותי. עם זאת, ניתן לבצע ביקורת מתודולוגית גם על בסיס השומה הקיימת, תמונות ומסמכים — תלוי בצרכים.</p>
+        </div>
+        <div class="faq-item animate-in delay-4">
+          <h4>
+            <i class="fas fa-question-circle"></i>
+            האם אתם עובדים עם כל סוגי הנכסים?
+          </h4>
+          <p>כן. ניסיוננו כולל נכסי מגורים, מסחר, תעשייה, נדל"ן מניב, קרקעות, נכסים מורכבים, פרויקטי פינוי בינוי, תוכניות איחוד וחלוקה ועוד.</p>
+        </div>
+        <div class="faq-item animate-in delay-1">
+          <h4>
+            <i class="fas fa-question-circle"></i>
+            מה קורה אם מתגלים כשלים בשומה?
+          </h4>
+          <p>הדוח יפרט את הכשלים, יעריך את השפעתם הכלכלית, ויציע המלצות לפעולה — בין אם דרישה לתיקון השומה, הגשת השגה, או בחינת אפשרות משפטית.</p>
+        </div>
+        <div class="faq-item animate-in delay-2">
+          <h4>
+            <i class="fas fa-question-circle"></i>
+            האם ניתן לקבל חוות דעת שנייה על שומת היטל השבחה?
+          </h4>
+          <p>בהחלט. זהו אחד מתחומי הפעילות המרכזיים שלנו. שומות היטל השבחה כוללות לעיתים קרובות שגיאות מתודולוגיות שניתן לתקוף בהשגה ולחסוך סכומים משמעותיים.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA Section ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner animate-in">
+        <div class="cta-content">
+          <h2>עוד שאלות? נשמח לדבר.</h2>
+          <p>התקשרו ישירות לשיחה קצרה ללא התחייבות — ונסייע לכם להבין האם ובאיזה מידה ניתן לסייע לכם.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="tel:050-0000000" class="btn btn-white btn-lg">
+            <i class="fas fa-phone-alt"></i>
+            050-000-0000
+          </a>
+          <a href="services.html" class="btn btn-outline-white btn-lg">
+            <i class="fas fa-list"></i>
+            הצגת השירותים
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="LOGO.png" alt="ירון אליהו שמאות מקרקעין">
+          <p>משרד שמאות מקרקעין המתמחה בתיקוף ובקרת שומות, ניהול סיכונים, ושירותי שמאות מורכבים לגופים פיננסיים, עסקיים ורשויות ציבוריות.</p>
+        </div>
+        <div class="footer-col">
+          <h4>ניווט מהיר</h4>
+          <ul>
+            <li><a href="index.html">דף הבית</a></li>
+            <li><a href="about.html">פרופיל מקצועי</a></li>
+            <li><a href="services.html">שירותי המשרד</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>צור קשר</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>050-000-0000</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@yaron-realestate.co.il</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>עומר, מחוז הנגב</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span>ראשון – חמישי: 9:00–18:00</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 ירון אליהו – שמאות ויעוץ מקרקעין. כל הזכויות שמורות.</span>
+        <span>רישיון שמאי מקרקעין: 1964</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Contact form handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> שולח...';
+
+      // Simulate form submission
+      setTimeout(function() {
+        document.getElementById('formSuccess').classList.add('show');
+        btn.innerHTML = '<i class="fas fa-check"></i> נשלח!';
+        btn.style.background = '#27AE60';
+        btn.style.borderColor = '#27AE60';
+      }, 1200);
+    });
+  </script>
+</body>
+</html>

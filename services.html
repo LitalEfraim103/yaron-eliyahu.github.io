@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שירותי המשרד – ירון אליהו שמאות מקרקעין</title>
+  <meta name="description" content="שירותי שמאות מקרקעין מקצועיים: תיקוף ובקרת שומות, שומות מס – היטל השבחה ורמ"י, שומות לבנקים ומוסדות פיננסיים.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <img src="LOGO.png" alt="ירון אליהו שמאות ויעוץ מקרקעין">
+      </a>
+      <ul class="navbar-links">
+        <li><a href="index.html">בית</a></li>
+        <li><a href="about.html">אודות</a></li>
+        <li><a href="services.html" class="active">שירותים</a></li>
+        <li><a href="contact.html">צור קשר</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <a href="tel:050-0000000" class="navbar-phone">
+          <i class="fas fa-phone-alt"></i>
+          050-000-0000
+        </a>
+        <a href="contact.html" class="btn btn-primary btn-sm">תיאום פגישת ייעוץ</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">בית</a>
+    <a href="about.html">אודות</a>
+    <a href="services.html">שירותים</a>
+    <a href="contact.html">צור קשר</a>
+    <a href="contact.html" class="btn btn-primary">תיאום פגישת ייעוץ</a>
+  </div>
+
+  <!-- ===== Page Header ===== -->
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-tag">שירותי המשרד</div>
+      <h1>שירותים מקצועיים</h1>
+      <p>שלושה תחומי ליבה המשלבים עומק שמאי, חשיבה ביקורתית וגישה ניהולית — לטובת ארגונים הנדרשים לוודאות כלכלית</p>
+    </div>
+  </header>
+
+  <!-- ===== Services Intro ===== -->
+  <section class="services-intro">
+    <div class="container">
+      <div class="section-header animate-in">
+        <div class="section-tag">הגישה שלנו</div>
+        <h2 class="section-title">שמאות כמנגנון הגנה — לא רק כהערכת שווי</h2>
+        <p class="section-subtitle">כל שירות מתוכנן כדי לתת לדרג הניהולי וועדת הדירקטוריון מה שהם באמת צריכים: ודאות כלכלית, ניהול סיכונים, ו"תמצית מנהלים" ברורה שמאפשרת קבלת החלטות מושכלת.</p>
+      </div>
+
+      <!-- 3 Quick Service Cards -->
+      <div class="problems-grid">
+        <div class="problem-card animate-in delay-1" style="cursor:pointer;" onclick="document.getElementById('service1').scrollIntoView({behavior:'smooth'})">
+          <div class="problem-icon" style="background:#E8F4FD; color:var(--primary-dark);">
+            <i class="fas fa-search-dollar"></i>
+          </div>
+          <h3>א. תיקוף ובקרת שומות</h3>
+          <p>קו הגנה שני — ביקורת עומק מתודולוגית לשומות קיימות, מבחני רגישות וזיהוי כשלים.</p>
+          <p style="margin-top:12px; font-weight:600; color:var(--primary-dark); font-size:0.9rem;">גלול לפרטים ↓</p>
+        </div>
+        <div class="problem-card animate-in delay-2" style="cursor:pointer;" onclick="document.getElementById('service2').scrollIntoView({behavior:'smooth'})">
+          <div class="problem-icon" style="background:#FFF3E0; color:#E67E22;">
+            <i class="fas fa-receipt"></i>
+          </div>
+          <h3>ב. שומות מס – הזדמנות לחיסכון</h3>
+          <p>בחינה וביקורת של שומות היטל השבחה, דרישות רמ"י ופיצויי הפקעה — חיסכון ישיר.</p>
+          <p style="margin-top:12px; font-weight:600; color:var(--primary-dark); font-size:0.9rem;">גלול לפרטים ↓</p>
+        </div>
+        <div class="problem-card animate-in delay-3" style="cursor:pointer;" onclick="document.getElementById('service3').scrollIntoView({behavior:'smooth'})">
+          <div class="problem-icon" style="background:#E8F8EF; color:#27AE60;">
+            <i class="fas fa-landmark"></i>
+          </div>
+          <h3>ג. שומות לבנקים ומוסדות פיננסיים</h3>
+          <p>שומות לפי תקן 19 לבטוחות ואשראי, וטבלאות הקצאה ואיזון בתוכניות איחוד וחלוקה.</p>
+          <p style="margin-top:12px; font-weight:600; color:var(--primary-dark); font-size:0.9rem;">גלול לפרטים ↓</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Service 1 ===== -->
+  <section class="service-block" id="service1">
+    <div class="container">
+      <div class="service-block-inner">
+
+        <!-- Content -->
+        <div class="service-block-content animate-in">
+          <div class="service-number">01</div>
+          <div class="section-tag">שירות ראשי</div>
+          <h2 class="section-title">תיקוף ובקרת שומות מקרקעין<br><span class="accent">קו הגנה שני</span></h2>
+          <p class="service-desc">ביצוע ביקורת עומק מתודולוגית לשומות קיימות — בחינת הנחות יסוד, ריביות ועלויות. מהו הסיכון שנלקח? האם הנחות העבודה ריאליות? האם השומה מביאה בחשבון את כל הגורמים הרלוונטיים?</p>
+          <p class="service-desc">השירות מתרגם את השומה הטכנית לתמצית מנהלים ברורה, המציגה סיכוי מול סיכון בנקודות הרגישות — כלי קבלת החלטות לדרג הדירקטוריון.</p>
+
+          <div class="service-benefits">
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>בדיקת תקינות מתודולוגית של השומה הקיימת</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>בחינת הנחות יסוד — ריבית, עלויות, שיעור שבח ועוד</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>מבחני רגישות: מה קורה אם הריבית עולה ב-1%? אם עלויות הבנייה גדלות ב-15%?</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>זיהוי "דגלים אדומים" — כשלים שמאיים וחולשות בנכס</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>דוח תמצית מנהלים — ברור, קצר ופועל</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>הגנה על הארגון מפני הסתמכות על שומות פגומות</span>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary" style="margin-top: 28px;">
+            <i class="fas fa-calendar-alt"></i>
+            בקשת תיקוף שומה
+          </a>
+        </div>
+
+        <!-- Visual Box -->
+        <div class="service-block-visual animate-in delay-2">
+          <div class="service-visual-box">
+            <div class="service-visual-icon">
+              <i class="fas fa-search-dollar"></i>
+            </div>
+            <h3>מה מקבלים בסיום?</h3>
+            <p>דוח מקצועי ומקיף הכולל ממצאים, מבחני רגישות ותמצית מנהלים — כלי עבודה בידי הדירקטוריון.</p>
+            <div class="service-visual-stats">
+              <div class="service-visual-stat">
+                <span class="num">100%</span>
+                <span class="lbl">עצמאות</span>
+              </div>
+              <div class="service-visual-stat">
+                <span class="num">תקן 19</span>
+                <span class="lbl">תקינות</span>
+              </div>
+              <div class="service-visual-stat">
+                <span class="num">בלתי תלוי</span>
+                <span class="lbl">אובייקטיבי</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Process -->
+          <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:28px; margin-top:20px;">
+            <h4 style="font-size:1rem; font-weight:700; color:var(--text-dark); margin-bottom:18px; display:flex; align-items:center; gap:10px;">
+              <i class="fas fa-route" style="color:var(--primary-dark);"></i>
+              תהליך העבודה
+            </h4>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div style="display:flex; align-items:flex-start; gap:12px;">
+                <span style="width:24px; height:24px; background:var(--primary-dark); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; flex-shrink:0;">1</span>
+                <span style="font-size:0.9rem; color:var(--text-gray);">קבלת השומה הקיימת ותיאום ראשוני</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:12px;">
+                <span style="width:24px; height:24px; background:var(--primary-dark); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; flex-shrink:0;">2</span>
+                <span style="font-size:0.9rem; color:var(--text-gray);">ביקורת עומק מתודולוגית</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:12px;">
+                <span style="width:24px; height:24px; background:var(--primary-dark); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; flex-shrink:0;">3</span>
+                <span style="font-size:0.9rem; color:var(--text-gray);">ביצוע מבחני רגישות בנקודות הרגישות</span>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:12px;">
+                <span style="width:24px; height:24px; background:var(--primary); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; flex-shrink:0;">4</span>
+                <span style="font-size:0.9rem; color:var(--text-gray);">הגשת דוח תמצית מנהלים</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Service 2 ===== -->
+  <section class="service-block" id="service2">
+    <div class="container">
+      <div class="service-block-inner">
+
+        <!-- Content -->
+        <div class="service-block-content animate-in">
+          <div class="service-number">02</div>
+          <div class="section-tag">שירות מס</div>
+          <h2 class="section-title">בחינת ותיקוף שומות מס<br><span class="accent">הזדמנות לחיסכון</span></h2>
+          <p class="service-desc">בדיקת שומות היטל השבחה, דרישות תשלום של רמ"י ופיצויי הפקעה — הפיכת חשיפת המס לחיסכון ישיר באמצעות איתור כשלים שמאיים והגשת השגות מקצועיות.</p>
+          <p class="service-desc">ניסיון עשיר בשמאות ועדות מקומיות (דימונה, ערבה תיכונה) מאפשר לאתר כשלים שמאיים בשומות המס שהארגון קיבל, ולתקוף אותם בצורה מקצועית ומבוססת.</p>
+
+          <div class="service-benefits">
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>בחינת שומות היטל השבחה — זיהוי שגיאות ועיוותי שווי</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>ביקורת דרישות תשלום של רמ"י — רשות מקרקעי ישראל</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>בחינת שומות פיצויי הפקעה — הגדרות ופיצויים מלאים</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>הגשת השגות מקצועיות ומבוססות לרשויות</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>חיסכון כספי ישיר ומשמעותי — עד מיליוני שקלים</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>ניסיון בביצוע שומות להיטל השבחה לוועדות מקומיות</span>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary" style="margin-top: 28px;">
+            <i class="fas fa-search"></i>
+            בדיקת שומת המס שלכם
+          </a>
+        </div>
+
+        <!-- Visual Box -->
+        <div class="service-block-visual animate-in delay-2">
+          <div class="service-visual-box service-tax-box">
+            <div class="service-tax-stripe"></div>
+            <div class="service-visual-icon service-tax-icon">
+              <i class="fas fa-receipt"></i>
+            </div>
+            <h3 class="service-tax-title">מדוע לבדוק שומות מס?</h3>
+            <p class="service-tax-text">שגיאות מתודולוגיות בשומות היטל השבחה ורמ"י נפוצות מאוד — וניתן לתקוף אותן. כל שגיאה שאתרנו שוות מיליוני שקלים.</p>
+            <div class="service-visual-stats">
+              <div class="service-visual-stat">
+                <span class="num service-tax-num">חיסכון</span>
+                <span class="lbl service-tax-lbl">ישיר</span>
+              </div>
+              <div class="service-visual-stat">
+                <span class="num service-tax-num">השגה</span>
+                <span class="lbl service-tax-lbl">מקצועית</span>
+              </div>
+              <div class="service-visual-stat">
+                <span class="num service-tax-num">פיצוי</span>
+                <span class="lbl service-tax-lbl">מלא</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tax Types -->
+          <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:28px; margin-top:20px;">
+            <h4 style="font-size:1rem; font-weight:700; color:var(--text-dark); margin-bottom:18px; display:flex; align-items:center; gap:10px;">
+              <i class="fas fa-list-ul" style="color:var(--primary-dark);"></i>
+              סוגי שומות מס שנבחנים
+            </h4>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <div style="display:flex; align-items:center; gap:12px; padding:10px 14px; background:var(--bg-light); border-radius:var(--radius-sm); border:1px solid var(--border);">
+                <i class="fas fa-building" style="color:var(--primary-dark); width:16px;"></i>
+                <span style="font-size:0.9rem; font-weight:600; color:var(--text-dark);">היטל השבחה – שומות ועדות מקומיות</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:10px 14px; background:var(--bg-light); border-radius:var(--radius-sm); border:1px solid var(--border);">
+                <i class="fas fa-landmark" style="color:var(--primary-dark); width:16px;"></i>
+                <span style="font-size:0.9rem; font-weight:600; color:var(--text-dark);">דרישות תשלום רמ"י – קרקעות מדינה</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:10px 14px; background:var(--bg-light); border-radius:var(--radius-sm); border:1px solid var(--border);">
+                <i class="fas fa-road" style="color:var(--primary-dark); width:16px;"></i>
+                <span style="font-size:0.9rem; font-weight:600; color:var(--text-dark);">פיצויי הפקעה – תמורה מלאה ומוצדקת</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Service 3 ===== -->
+  <section class="service-block" id="service3">
+    <div class="container">
+      <div class="service-block-inner">
+
+        <!-- Content -->
+        <div class="service-block-content animate-in">
+          <div class="service-number">03</div>
+          <div class="section-tag">שירות פיננסי</div>
+          <h2 class="section-title">שומות לבנקים ומוסדות פיננסיים<br><span class="accent">וטבלאות איזון</span></h2>
+          <p class="service-desc">עריכת שומות לפי תקן 19 לצורכי בטוחה ואשראי — לבנקים מסחריים, קרנות אשראי וגופי השקעה. שמאי מאושר בבנק מזרחי טפחות, טריא ו-BTB, עם ניסיון עשיר בנכסים מורכבים ומגוונים.</p>
+          <p class="service-desc">בנוסף — עריכת טבלאות הקצאה ואיזון במסגרת תוכניות איחוד וחלוקה ללא הסכמת בעלים, בהתאם לתקן 15.</p>
+
+          <div class="service-benefits">
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>שומות לפי תקן 19 לצורכי בטוחה ואשראי</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>שמאי מאושר בבנקים: מזרחי טפחות, טריא, BTB</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>ניסיון בנכסים מסחריים, תעשייתיים ומגורים מורכבים</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>עריכת טבלאות הקצאה ואיזון – תקן 15</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>שומות לטרום רכישה וקבלת החלטות השקעה</span>
+            </div>
+            <div class="service-benefit">
+              <i class="fas fa-check-circle"></i>
+              <span>שומות לחלוקת עיזבון, גירושין ויורשים</span>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary" style="margin-top: 28px;">
+            <i class="fas fa-file-contract"></i>
+            פנייה לשומה
+          </a>
+        </div>
+
+        <!-- Visual Box -->
+        <div class="service-block-visual animate-in delay-2">
+          <div class="service-visual-box" style="background: linear-gradient(135deg, #1A5276 0%, #0B2B40 100%);">
+            <div class="service-visual-icon">
+              <i class="fas fa-landmark"></i>
+            </div>
+            <h3>בנקים ומוסדות פיננסיים</h3>
+            <p>שמאי מאושר בבנקים מובילים, עם ניסיון בשנים רבות של שומות תקן 19 לנכסים מגוונים בכל רחבי הארץ.</p>
+            <div class="service-visual-stats">
+              <div class="service-visual-stat">
+                <span class="num">תקן 19</span>
+                <span class="lbl">בטוחה</span>
+              </div>
+              <div class="service-visual-stat">
+                <span class="num">תקן 15</span>
+                <span class="lbl">איזון</span>
+              </div>
+              <div class="service-visual-stat">
+                <span class="num">3 בנקים</span>
+                <span class="lbl">מאושר</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Banks List -->
+          <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:28px; margin-top:20px;">
+            <h4 style="font-size:1rem; font-weight:700; color:var(--text-dark); margin-bottom:18px; display:flex; align-items:center; gap:10px;">
+              <i class="fas fa-university" style="color:var(--primary-dark);"></i>
+              שמאי מאושר בגופים
+            </h4>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <div style="display:flex; align-items:center; gap:12px; padding:12px 16px; background:var(--bg-light); border-radius:var(--radius-sm); border:1px solid var(--border);">
+                <i class="fas fa-check-circle" style="color:#27AE60; flex-shrink:0;"></i>
+                <div>
+                  <strong style="font-size:0.92rem; color:var(--text-dark);">בנק מזרחי טפחות</strong>
+                  <span style="font-size:0.82rem; color:var(--text-light); margin-right:8px;">שמאי מאושר</span>
+                </div>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:12px 16px; background:var(--bg-light); border-radius:var(--radius-sm); border:1px solid var(--border);">
+                <i class="fas fa-check-circle" style="color:#27AE60; flex-shrink:0;"></i>
+                <div>
+                  <strong style="font-size:0.92rem; color:var(--text-dark);">קרן טריא</strong>
+                  <span style="font-size:0.82rem; color:var(--text-light); margin-right:8px;">שמאי מאושר</span>
+                </div>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:12px 16px; background:var(--bg-light); border-radius:var(--radius-sm); border:1px solid var(--border);">
+                <i class="fas fa-check-circle" style="color:#27AE60; flex-shrink:0;"></i>
+                <div>
+                  <strong style="font-size:0.92rem; color:var(--text-dark);">BTB</strong>
+                  <span style="font-size:0.82rem; color:var(--text-light); margin-right:8px;">שמאי מאושר</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Us Section ===== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="section-header animate-in" style="margin-bottom:48px;">
+        <div class="section-tag" style="background:rgba(127,181,204,0.2); color:var(--primary);">למה לבחור בנו?</div>
+        <h2 class="section-title" style="color:var(--white);">הייתרון התחרותי שלנו</h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item animate-in">
+          <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="stat-number" style="font-size:1.4rem;">ניגוד עניינים אפס</div>
+          <div class="stat-label">אנחנו לא מבצעים את השומה המקורית — מה שמבטיח אובייקטיביות מוחלטת בתיקוף</div>
+        </div>
+        <div class="stat-item animate-in delay-1">
+          <div class="stat-icon"><i class="fas fa-brain"></i></div>
+          <div class="stat-number" style="font-size:1.4rem;">שילוב ייחודי</div>
+          <div class="stat-label">שמאות + M.B.A + ביקורת פנים + ניסיון ציבורי — שילוב שאין בשוק</div>
+        </div>
+        <div class="stat-item animate-in delay-2">
+          <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="stat-number" style="font-size:1.4rem;">תמצית מנהלים</div>
+          <div class="stat-label">כל תוצר ניתן בשפת ניהול — לא דוח שמאי טכני, אלא כלי עבודה לדירקטוריון</div>
+        </div>
+        <div class="stat-item animate-in delay-3">
+          <div class="stat-icon"><i class="fas fa-user-secret"></i></div>
+          <div class="stat-number" style="font-size:1.4rem;">דיסקרטיות מלאה</div>
+          <div class="stat-label">פנייה דיסקרטית, טיפול בסודיות מלאה — מתאים לפניות בכירות ורגישות</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA Section ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner animate-in">
+        <div class="cta-content">
+          <h2>מוכנים לצעד הבא?</h2>
+          <p>פנו אלינו לשיחת היכרות קצרה — נבין את הצרכים שלכם ונציע את השירות המתאים ביותר לנסיבות. ללא התחייבות.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-white btn-lg">
+            <i class="fas fa-calendar-check"></i>
+            תיאום פגישת ייעוץ
+          </a>
+          <a href="tel:050-0000000" class="btn btn-outline-white btn-lg">
+            <i class="fas fa-phone-alt"></i>
+            050-000-0000
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="LOGO.png" alt="ירון אליהו שמאות מקרקעין">
+          <p>משרד שמאות מקרקעין המתמחה בתיקוף ובקרת שומות, ניהול סיכונים, ושירותי שמאות מורכבים לגופים פיננסיים, עסקיים ורשויות ציבוריות.</p>
+        </div>
+        <div class="footer-col">
+          <h4>ניווט מהיר</h4>
+          <ul>
+            <li><a href="index.html">דף הבית</a></li>
+            <li><a href="about.html">פרופיל מקצועי</a></li>
+            <li><a href="services.html">שירותי המשרד</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>צור קשר</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>050-000-0000</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@yaron-realestate.co.il</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>עומר, מחוז הנגב</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span>ראשון – חמישי: 9:00–18:00</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 ירון אליהו – שמאות ויעוץ מקרקעין. כל הזכויות שמורות.</span>
+        <span>רישיון שמאי מקרקעין: 1964</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ירון אליהו – שמאות ויעוץ מקרקעין | תיקוף ובקרת שומות וניהול סיכונים</title>
-  <meta name="description" content="ירון אליהו – שמאי מקרקעין מוסמך. תיקוף ובקרת שומות, ניהול סיכונים, שומות לבנקים ומוסדות פיננסיים. קו הגנה שני לדרג הניהולי והדירקטוריון.">
+  <meta name="description" content="ירון אליהו – שמאי מקרקעין מוסמך. תיקוף ובקרת שומות, ניהול סיכונים, שומות לבנקים ומוסדות פיננסיים. קו הגנה נוסף לדרג הניהולי והדירקטוריון.">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -18,15 +18,20 @@
         <img src="LOGO.png" alt="ירון אליהו שמאות ויעוץ מקרקעין">
       </a>
       <ul class="navbar-links">
-        <li><a href="index.html" class="active">בית</a></li>
-        <li><a href="about.html">אודות</a></li>
-        <li><a href="services.html">שירותים</a></li>
+        <li><a href="index.html" class="active">דף הבית</a></li>
+        <li><a href="about.html">פרופיל מקצועי</a></li>
+        <li><a href="services.html">שירותי המשרד</a></li>
         <li><a href="contact.html">צור קשר</a></li>
       </ul>
       <div class="navbar-actions">
-        <a href="tel:050-0000000" class="navbar-phone">
+        <div class="zoom-controls">
+          <button class="zoom-btn" id="zoomOut" aria-label="הקטן">−</button>
+          <span class="zoom-level" id="zoomLevel">100%</span>
+          <button class="zoom-btn" id="zoomIn" aria-label="הגדל">+</button>
+        </div>
+        <a href="tel:054-766-3721" class="navbar-phone">
           <i class="fas fa-phone-alt"></i>
-          050-000-0000
+          054-766-3721
         </a>
         <a href="contact.html" class="btn btn-primary btn-sm">תיאום פגישת ייעוץ</a>
       </div>
@@ -38,9 +43,9 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">בית</a>
-    <a href="about.html">אודות</a>
-    <a href="services.html">שירותים</a>
+    <a href="index.html">דף הבית</a>
+    <a href="about.html">פרופיל מקצועי</a>
+    <a href="services.html">שירותי המשרד</a>
     <a href="contact.html">צור קשר</a>
     <a href="contact.html" class="btn btn-primary">תיאום פגישת ייעוץ</a>
   </div>
@@ -57,13 +62,14 @@
           <span class="dot"></span>
           שמאות ויעוץ מקרקעין מקצועי
         </div>
-        <h1 class="hero-title animate-in delay-1">
-          ירון אליהו –<br>
-          <span class="text-accent">תיקוף, בקרת שומות</span><br>
+        <h1 class="hero-title animate-in delay-1">ירון אליהו</h1>
+        <h2 class="hero-tagline animate-in delay-2">
+          <span class="text-accent">שמאות מקרקעין וייעוץ נדלן</span><br>
+          תיקוף, בקרת שומות<br>
           וניהול סיכונים במקרקעין
-        </h1>
-        <p class="hero-subtitle animate-in delay-2">
-          מעניקים לדרג הניהולי והדירקטוריון קו הגנה שני, אובייקטיבי ובלתי תלוי — להשגת ודאות כלכלית ונטרול כשלים מובנים בשומות מקרקעין מורכבות.
+        </h2>
+        <p class="hero-subtitle animate-in delay-3">
+          מעניקים לדרג הניהולי והדירקטוריון קו הגנה נוסף, אובייקטיבי ובלתי תלוי — להשגת ודאות כלכלית ונטרול כשלים לא צפויים בקבלת החלטות בנדל"ן
         </p>
         <div class="hero-actions animate-in delay-3">
           <a href="contact.html" class="btn btn-white btn-lg">
@@ -75,65 +81,96 @@
             השירותים שלנו
           </a>
         </div>
-        <div class="hero-badges animate-in delay-4">
-          <div class="badge">
-            <i class="fas fa-shield-alt"></i>
-            <span>שמאי ועדה מחוזית מרכז</span>
-          </div>
-          <div class="badge">
-            <i class="fas fa-balance-scale"></i>
-            <span>צוות בוחנים – משרד המשפטים</span>
-          </div>
-          <div class="badge">
-            <i class="fas fa-graduation-cap"></i>
-            <span>M.B.A | רישיון 1964</span>
-          </div>
-        </div>
       </div>
 
-      <!-- Left: Feature Cards -->
+      <!-- Left: Credentials Grid -->
       <div class="hero-visual">
-        <div class="hero-card animate-in delay-1">
-          <div class="hero-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="8" y1="13" x2="13" y2="13"/>
-              <line x1="8" y1="16" x2="11" y2="16"/>
-              <circle cx="16.5" cy="17.5" r="2.5"/>
-              <line x1="18.5" y1="19.5" x2="20" y2="21"/>
-            </svg>
+        <div class="hero-badges animate-in delay-2">
+
+          <!-- Group: Services (top) -->
+          <div class="badge-group-label">
+            <i class="fas fa-briefcase"></i>
+            <span>תחומי שירות</span>
           </div>
-          <h3>תיקוף ובקרת שומות</h3>
-          <p>ביקורת עומק מתודולוגית, בחינת הנחות יסוד ומבחני רגישות על שומות קיימות</p>
-        </div>
-        <div class="hero-card animate-in delay-2">
-          <div class="hero-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="2" x2="12" y2="20"/>
-              <path d="M5 20h14"/>
-              <path d="M5 9L2 15h6L5 9z"/>
-              <path d="M19 9l-3 6h6l-3-6z"/>
-              <line x1="5" y1="9" x2="19" y2="9"/>
-            </svg>
+          <div class="badge">
+            <i class="fas fa-shield-alt"></i>
+            <span>בקרת שומות, תיקוף וניהול סיכונים</span>
           </div>
-          <h3>ניהול סיכונים</h3>
-          <p>הפיכת השומה ממסמך סטטי לתמצית מנהלים דינמית — סיכוי מול סיכון</p>
-        </div>
-        <div class="hero-card animate-in delay-3">
-          <div class="hero-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 10l9-7 9 7"/>
-              <line x1="3" y1="10" x2="21" y2="10"/>
-              <line x1="3" y1="21" x2="21" y2="21"/>
-              <line x1="6" y1="10" x2="6" y2="21"/>
-              <line x1="10" y1="10" x2="10" y2="21"/>
-              <line x1="14" y1="10" x2="14" y2="21"/>
-              <line x1="18" y1="10" x2="18" y2="21"/>
-            </svg>
+          <div class="badge">
+            <i class="fas fa-layer-group"></i>
+            <div class="badge-body"><strong>ביקורת עומק מתודולוגית</strong><small>בחינת הנחות יסוד ומבחני רגישות</small></div>
           </div>
-          <h3>שומות פיננסיות</h3>
-          <p>שומות לבנקים ומוסדות פיננסיים לפי תקן 19 לנכסים מורכבים ומגוונים</p>
+          <div class="badge">
+            <i class="fas fa-file-lines"></i>
+            <div class="badge-body"><strong>תמצית מנהלים דינמית</strong><small>בסיס לקבלת החלטה שקולה ואחראית</small></div>
+          </div>
+          <div class="badge">
+            <i class="fas fa-university"></i>
+            <div class="badge-body"><strong>שמאויות לאשראי בנקאי</strong><small>בנקים וגופי אשראי חוץ-בנקאי</small></div>
+          </div>
+          <div class="badge">
+            <i class="fas fa-chart-pie"></i>
+            <span>שומות פיננסיות</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <div class="badge-body"><strong>שומות לבנקים – תקן 19</strong><small>לנכסים מורכבים ומגוונים</small></div>
+          </div>
+          <div class="badge">
+            <i class="fas fa-compass"></i>
+            <span>שמאות לתכנון</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-table"></i>
+            <div class="badge-body"><strong>טבלאות הקצאה ואיזון</strong><small>איחוד וחלוקה ללא הסכמת בעלים</small></div>
+          </div>
+
+          <!-- Group: Credentials (bottom) -->
+          <div class="badge-group-label badge-group-label--credentials">
+            <i class="fas fa-user-tie"></i>
+            <span>כישורים מקצועיים</span>
+          </div>
+          <div class="badge badge--credential">
+            <i class="fas fa-id-card"></i>
+            <div class="badge-body"><strong>שמאי מקרקעין – רישיון 1964</strong><small>חבר בלשכת שמאי המקרקעין</small></div>
+          </div>
+          <div class="badge badge--credential">
+            <i class="fas fa-graduation-cap"></i>
+            <span>M.B.A במנהל עסקים</span>
+          </div>
+          <div class="badge badge--credential">
+            <i class="fas fa-book"></i>
+            <span>B.A בכלכלה ומנהל עסקים</span>
+          </div>
+          <div class="badge badge--credential">
+            <i class="fas fa-search"></i>
+            <span>בוגר לימודי ביקורת פנים</span>
+          </div>
+          <div class="badge badge--credential">
+            <i class="fas fa-landmark"></i>
+            <span>שמאי יועץ לוועדה המחוזית מרכז</span>
+          </div>
+          <div class="badge badge--credential">
+            <i class="fas fa-city"></i>
+            <span>שמאי ועדות מקומיות</span>
+          </div>
+          <div class="badge badge--credential">
+            <i class="fas fa-balance-scale"></i>
+            <div class="badge-body"><strong>מומחה מטעם בתי המשפט</strong><small>בתחום שמאות מקרקעין</small></div>
+          </div>
+          <div class="badge badge--credential">
+            <i class="fas fa-user-check"></i>
+            <div class="badge-body"><strong>צוות בוחנים – משרד המשפטים</strong><small>בחינות הסמכת שמאי מקרקעין</small></div>
+          </div>
+          <div class="badge badge--credential">
+            <i class="fas fa-book-open"></i>
+            <div class="badge-body"><strong>נורמות מקצועיות ופסיקה</strong><small>הכרות מעמיקה בנורמות ובהחלטות</small></div>
+          </div>
+          <div class="badge badge--credential">
+            <i class="fas fa-file-signature"></i>
+            <span>ניסיון רב בהתנגדויות לתוכניות</span>
+          </div>
+
         </div>
       </div>
 
@@ -152,7 +189,7 @@
       <div class="section-header animate-in">
         <div class="section-tag">האתגר הניהולי</div>
         <h2 class="section-title">מה הסיכון שאתם נושאים?</h2>
-        <p class="section-subtitle">הסתמכות על שומה בודדת ללא תיקוף עצמאי עלולה לחשוף את הארגון לנזקים כלכליים משמעותיים ובלתי הפיכים</p>
+        <p class="section-subtitle">הסתמכות על חוות דעת שמאית ללא בחינה ביקורתית של המתודולוגיה, ההנחות המרכזיות ותיקופן באמצעות בקרה שמאית עצמאית, עלולה לחשוף את הארגון לנזקים כלכליים משמעותיים ולעיתים בלתי הפיכים.<br><br>כך, למשל, שימוש בשיעור היוון נמוך שאינו מבוסס, אי-הבאה בחשבון של דחייה צפויה במימוש הזכויות, או הנחה בדבר אפשרות להכשרת שימושים נוספים או חריגות בנייה — עלולים להוביל להערכת שווי מוטה, לקבלת החלטות שגויה ולחשיפה כלכלית מהותית.</p>
       </div>
       <div class="problems-grid">
         <div class="problem-card animate-in delay-1">
@@ -160,21 +197,21 @@
             <i class="fas fa-exclamation-triangle"></i>
           </div>
           <h3>הערכות אופטימיות מדי</h3>
-          <p>שומה בודדת ללא תיקוף עלולה לכלול הנחות יסוד שגויות — ריבית לא ריאלית, עלויות בנייה חסרות, הערכת שווי מנופחת. תוצאה: החלטות השקעה שגויות שעולות במיליונים.</p>
+          <p>שומה בודדת, שאינה עוברת בקרה ותיקוף עצמאי, עלולה להתבסס על הנחות יסוד שגויות: שיעור היוון שאינו משקף את הסיכון, עלויות בנייה חסרות, לוחות זמנים אופטימיים מדי או הערכת שווי מנופחת. התוצאה עלולה להיות החלטת השקעה שגויה, בהיקף משמעותי לארגון.</p>
         </div>
         <div class="problem-card animate-in delay-2">
           <div class="problem-icon">
             <i class="fas fa-money-bill-wave"></i>
           </div>
-          <h3>תשלום יתר של מיליוני שקלים</h3>
-          <p>ללא בחינה ביקורתית של שומות היטל השבחה, דרישות רמ"י ופיצויי הפקעה, הארגון עלול לשלם סכומים עצומים מיותרים עקב טעויות מתודולוגיות הניתנות לתקיפה.</p>
+          <h3>תשלום יתר או פגיעה כלכלית מהותית</h3>
+          <p>ללא בחינה ביקורתית של שומות היטל השבחה, דרישות תשלום מרמ״י, הקצאות בטבלאות איזון, או אומדני פיצויי הפקעה, הארגון עלול לשלם סכומים עודפים ומיותרים — או להיפגע בהקצאה עקב טעויות מתודולוגיות שניתן היה לזהות ולתקוף מבעוד מועד.</p>
         </div>
         <div class="problem-card animate-in delay-3">
           <div class="problem-icon">
             <i class="fas fa-eye-slash"></i>
           </div>
           <h3>נקודות תורפה בלתי מזוהות</h3>
-          <p>ללא עין ביקורתית מקצועית, כשלים שמאיים, בעיות נסתרות בנכס, או חולשות מתודולוגיות נשארות בלתי מזוהות — עד לאחר קבלת ההחלטה הגורלית.</p>
+          <p>ללא עין מקצועית בלתי תלויה, כשלים שמאיים, בעיות תכנוניות או משפטיות בנכס, והנחות עבודה בלתי מבוססות עלולים להישאר סמויים — עד לאחר קבלת החלטה עסקית מהותית.</p>
         </div>
       </div>
     </div>
@@ -187,29 +224,26 @@
         <!-- Content -->
         <div class="solution-content animate-in">
           <div class="section-tag">הפתרון</div>
-          <h2 class="section-title">קו הגנה שני —<br><span class="accent">אובייקטיבי ובלתי תלוי</span></h2>
-          <p class="solution-text">סיכון אינו מילה גסה — הוא הזדמנות, כל עוד מנהלים ומבינים אותו בצורה מיטבית. אני לא מחליף את השמאי המבצע — אני מוודא שהתהליך שלו תקין, שהנחות העבודה שלו ריאליות, ומהווה עוד קו הגנה בפני מקבל ההחלטות.</p>
-          <p class="solution-text">השירות מתרגם מורכבות שמאית לתמצית מנהלים ברורה, המציגה סיכוי מול סיכון, ומאפשרת לדירקטוריון ולהנהלה לקבל החלטות מבוססות ומושכלות.</p>
+          <h2 class="section-title">קו הגנה נוסף</h2>
+          <p class="solution-text">סיכון אינו מילה גסה; הוא חלק בלתי נפרד מקבלת החלטות עסקיות. ולעיתים הסיכוי בהחלט מצדיק סיכון מחושב. השאלה היא האם מזהים אותו, מבינים אותו ומנהלים אותו נכון.</p>
+          <p class="solution-text">תפקידי הוא לוודא שהתהליך השמאי נערך באופן תקין, שהנחות העבודה ריאליות, שהמתודולוגיה מבוססת, ושמקבלי ההחלטות מקבלים תמונה מקצועית, מאוזנת וברורה של הסיכוי מול הסיכון.</p>
+          <p class="solution-text">השירות מתרגם מורכבות שמאית לתמצית מנהלים ברורה, המאפשרת לדירקטוריון ולהנהלה לקבל החלטות מבוססות, מושכלות ומוגנות יותר.</p>
           <div class="solution-points">
             <div class="solution-point">
               <i class="fas fa-check-circle"></i>
-              <span>ביקורת עומק מתודולוגית לשומות קיימות</span>
+              <span>תיקוף מתודולוגי</span>
             </div>
             <div class="solution-point">
               <i class="fas fa-check-circle"></i>
-              <span>מבחני רגישות לשינויי ריבית, עלויות בנייה ותשואה</span>
+              <span>מבחני רגישות</span>
             </div>
             <div class="solution-point">
               <i class="fas fa-check-circle"></i>
-              <span>זיהוי "דגלים אדומים" וחולשות מתודולוגיות</span>
+              <span>דגלים אדומים</span>
             </div>
             <div class="solution-point">
               <i class="fas fa-check-circle"></i>
-              <span>תמצית מנהלים ברורה לדרג הדירקטוריון</span>
-            </div>
-            <div class="solution-point">
-              <i class="fas fa-check-circle"></i>
-              <span>ניסיון רגולטורי עמוק — ועדות מחוזיות ומשרד המשפטים</span>
+              <span>תמצית מנהלים</span>
             </div>
           </div>
           <a href="services.html" class="btn btn-primary">
@@ -226,7 +260,7 @@
               <div class="ms-header-icon"><i class="fas fa-shield-alt"></i></div>
               <div>
                 <div class="ms-title">ארבעת עמודי הבקרה</div>
-                <div class="ms-subtitle">גישה שיטתית לניהול סיכון שמאי</div>
+                <div class="ms-subtitle">גישה שיטתית לבקרה שמאית ובחינת הנתונים העובדתיים</div>
               </div>
             </div>
 
@@ -235,31 +269,31 @@
                 <div class="ms-item-num">01</div>
                 <div class="ms-item-icon-wrap ms-icon-blue"><i class="fas fa-clipboard-check"></i></div>
                 <div class="ms-item-title">תיקוף מתודולוגי</div>
-                <div class="ms-item-desc">ביקורת עומק על הנחות יסוד ושיטות חישוב</div>
+                <div class="ms-item-desc">ביקורת עומק על הנחות יסוד ושיטות חישוב (עקרונות, גורמים ושיקולים)</div>
               </div>
               <div class="ms-item">
                 <div class="ms-item-num">02</div>
                 <div class="ms-item-icon-wrap ms-icon-teal"><i class="fas fa-sliders"></i></div>
                 <div class="ms-item-title">מבחני רגישות</div>
-                <div class="ms-item-desc">ריבית, עלויות ותשואה — ניתוח תרחישים</div>
+                <div class="ms-item-desc">הנחות שהובאו בשומה ושינויים אפשריים בסביבת המשק — ריבית, עלויות ותשואה. ניתוח תרחישים.</div>
               </div>
               <div class="ms-item ms-item-alert">
                 <div class="ms-item-num">03</div>
                 <div class="ms-item-icon-wrap ms-icon-red"><i class="fas fa-flag"></i></div>
                 <div class="ms-item-title">דגלים אדומים</div>
-                <div class="ms-item-desc">כשלים, חולשות ובעיות בלתי מזוהות</div>
+                <div class="ms-item-desc">כשלים, חולשות ובעיות אפשריות</div>
               </div>
               <div class="ms-item">
                 <div class="ms-item-num">04</div>
                 <div class="ms-item-icon-wrap ms-icon-blue"><i class="fas fa-file-lines"></i></div>
                 <div class="ms-item-title">תמצית מנהלים</div>
-                <div class="ms-item-desc">דוח ברור — סיכוי מול סיכון לדירקטוריון</div>
+                <div class="ms-item-desc">דוח ברור חושף סיכון לדירקטוריון ומותיר קבלת החלטה שקולה של הסיכוי למול הסיכון.</div>
               </div>
             </div>
 
             <div class="ms-footer">
               <i class="fas fa-check-circle"></i>
-              <span>התוצאה: ודאות כלכלית מלאה לדרג הניהולי</span>
+              <span>התוצאה: ודאות כלכלית מלאה בקבלת ההחלטה לדרג הניהולי.</span>
             </div>
 
           </div>
@@ -268,10 +302,47 @@
     </div>
   </section>
 
+  <!-- ===== Services Section ===== -->
+  <section class="services-intro" style="background:var(--bg-light);">
+    <div class="container">
+      <div class="section-header animate-in">
+        <div class="section-tag">שירותי המשרד</div>
+        <h2 class="section-title">שלושה תחומי ליבה</h2>
+        <p class="section-subtitle">כל שירות מתוכנן לתת לדרג הניהולי וועדת הדירקטוריון ודאות כלכלית, ניהול סיכונים ותמצית מנהלים ברורה.</p>
+      </div>
+      <div class="problems-grid">
+        <a href="services.html#service1" class="problem-card animate-in delay-1" style="text-decoration:none; cursor:pointer; display:block;">
+          <div class="problem-icon" style="background:#E8F4FD; color:var(--primary-dark);">
+            <i class="fas fa-search-dollar"></i>
+          </div>
+          <h3>תיקוף ובקרת שומות</h3>
+          <p>ביקורת עומק מתודולוגית לשומות קיימות — בחינת הנחות יסוד, מבחני רגישות וזיהוי דגלים אדומים. קו הגנה שני לדרג הניהולי.</p>
+          <p style="margin-top:12px; font-weight:600; color:var(--primary-dark); font-size:0.9rem;">לפרטים נוספים ‹</p>
+        </a>
+        <a href="services.html#service2" class="problem-card animate-in delay-2" style="text-decoration:none; cursor:pointer; display:block;">
+          <div class="problem-icon" style="background:#FFF3E0; color:#E67E22;">
+            <i class="fas fa-receipt"></i>
+          </div>
+          <h3>שומות מס – היטל השבחה ורמ"י</h3>
+          <p>בחינה וביקורת של שומות היטל השבחה, דרישות רמ"י ופיצויי הפקעה — איתור כשלים שמאיים והגשת השגות מקצועיות לחיסכון ישיר.</p>
+          <p style="margin-top:12px; font-weight:600; color:var(--primary-dark); font-size:0.9rem;">לפרטים נוספים ‹</p>
+        </a>
+        <a href="services.html#service3" class="problem-card animate-in delay-3" style="text-decoration:none; cursor:pointer; display:block;">
+          <div class="problem-icon" style="background:#E8F8EF; color:#27AE60;">
+            <i class="fas fa-landmark"></i>
+          </div>
+          <h3>שומות לבנקים וטבלאות איזון</h3>
+          <p>שומות לפי תקן 19 לבטוחות ואשראי לבנקים וגופי אשראי, ועריכת טבלאות הקצאה ואיזון בתוכניות איחוד וחלוקה לפי תקן 15.</p>
+          <p style="margin-top:12px; font-weight:600; color:var(--primary-dark); font-size:0.9rem;">לפרטים נוספים ‹</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Stats Section ===== -->
   <section class="stats-section">
     <div class="container">
-      <div class="stats-grid">
+      <div class="stats-grid stats-grid--wide">
         <div class="stat-item animate-in">
           <div class="stat-icon">
             <i class="fas fa-id-card"></i>
@@ -281,24 +352,52 @@
         </div>
         <div class="stat-item animate-in delay-1">
           <div class="stat-icon">
-            <i class="fas fa-city"></i>
+            <i class="fas fa-landmark"></i>
           </div>
           <div class="stat-number">ועדה מחוזית</div>
-          <div class="stat-label">שמאי ועדה מחוזית מרכז — לשכת התכנון. סקירה ובקרה לתוכניות איחוד וחלוקה, פינוי בינוי וכדאיות</div>
+          <div class="stat-label">שמאי ועדה מחוזית מרכז — לשכת התכנון. סקירה ובקרה לטבלאות הקצאה ואיזון בתוכניות איחוד וחלוקה, פינוי בינוי וכדאיות כלכלית. עריכת המלצות מענה להתנגדויות לתוכניות. מתן התייחסויות מקצועיות לקבלת החלטות בוועדה המחוזית.</div>
         </div>
         <div class="stat-item animate-in delay-2">
           <div class="stat-icon">
             <i class="fas fa-balance-scale"></i>
           </div>
-          <div class="stat-number">מאז 2017</div>
+          <div class="stat-number">צוות בוחנים</div>
           <div class="stat-label">חבר בצוות הבוחנים הרשמי של הבחינות הסופיות בשמאות מקרקעין — מועצת שמאי המקרקעין</div>
         </div>
         <div class="stat-item animate-in delay-3">
           <div class="stat-icon">
+            <i class="fas fa-city"></i>
+          </div>
+          <div class="stat-number">מעל עשור</div>
+          <div class="stat-label">משמש כשמאי ועדות מקומיות מעל עשור</div>
+        </div>
+        <div class="stat-item animate-in">
+          <div class="stat-icon">
+            <i class="fas fa-gavel"></i>
+          </div>
+          <div class="stat-number">מומחה</div>
+          <div class="stat-label">נכלל ברשימת המומחים מטעם בתי המשפט בתחום שמאות מקרקעין</div>
+        </div>
+        <div class="stat-item animate-in delay-1">
+          <div class="stat-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <div class="stat-number">אשראי בנקאי</div>
+          <div class="stat-label">עריכת שמאויות למטרת אשראי בנקאי עבור בנקים וגופי אשראי חוץ בנקאי — ניסיון של מעל עשור בתחום</div>
+        </div>
+        <div class="stat-item animate-in delay-2">
+          <div class="stat-icon">
             <i class="fas fa-graduation-cap"></i>
           </div>
           <div class="stat-number">M.B.A</div>
-          <div class="stat-label">תואר שני במנהל עסקים מאוניברסיטת בן גוריון + לימודי ביקורת פנים</div>
+          <div class="stat-label">תואר שני במנהל עסקים מאוניברסיטת בן גוריון — B.A תואר ראשון בכלכלה ומנהל עסקים</div>
+        </div>
+        <div class="stat-item animate-in delay-3">
+          <div class="stat-icon">
+            <i class="fas fa-book-reader"></i>
+          </div>
+          <div class="stat-number">לימודים נוספים</div>
+          <div class="stat-label">בוגר לימודי הכשרת דירקטורים — בוגר לימודי ביקורת פנים</div>
         </div>
       </div>
     </div>
@@ -310,28 +409,38 @@
       <div class="section-header animate-in">
         <div class="section-tag">קהל היעד</div>
         <h2 class="section-title">עם מי אנחנו עובדים?</h2>
-        <p class="section-subtitle">פנייה ישירה לגורמים הנושאים באחריות ובסיכון בארגון — ורוצים שקט נפשי</p>
+        <p class="section-subtitle">פנייה ישירה לגורמים הנושאים באחריות ובסיכון בארגון — ומבקשים לקבל החלטות נדל״ניות על בסיס תמונה שמאית מקצועית, בלתי תלויה וברורה.</p>
       </div>
       <div class="audience-grid">
         <div class="audience-card animate-in delay-1">
-          <i class="fas fa-university"></i>
-          <h3>בנקים וקרנות אשראי</h3>
-          <p>מנהלי תיקי בטוחות ואשראי הזקוקים לתיקוף בלתי תלוי לשומות בטוחה ואשראי</p>
+          <i class="fas fa-drafting-compass"></i>
+          <h3>אדריכלים ויזמים</h3>
+          <p>גורמים המקדמים תכניות איחוד וחלוקה, התחדשות עירונית או תכניות מורכבות, ונדרשים להכנת טבלאות הקצאה ואיזון מקצועיות, מבוססות ויעילות — כאלה שניתן לקדם בביטחון ובקצב מהיר מול מוסדות התכנון.</p>
         </div>
         <div class="audience-card animate-in delay-2">
-          <i class="fas fa-building"></i>
-          <h3>חברות יזמיות</h3>
-          <p>מנכ"לים, CFOs ומנהלי פרויקטים המקדמים מיזמי נדל"ן — ורוצים ודאות לפני ההחלטה</p>
+          <i class="fas fa-file-invoice-dollar"></i>
+          <h3>נישומים מול רשויות המס ורמ״י</h3>
+          <p>חברות ויחידים הניצבים מול שומות היטל השבחה, דרישות תשלום מרמ״י או אומדני פיצויי הפקעה — ומבקשים לבחון את החיוב, לצמצם חשיפה ולמנוע תשלום יתר.</p>
         </div>
         <div class="audience-card animate-in delay-3">
-          <i class="fas fa-chart-pie"></i>
-          <h3>גופי השקעה</h3>
-          <p>דירקטורים ומנהלי סיכונים המנהלים תיקי נדל"ן ונדרשים לחוות דעת שנייה ובלתי תלויה</p>
+          <i class="fas fa-table"></i>
+          <h3>בעלי זכויות ומקבלי הקצאות בטבלאות איזון</h3>
+          <p>בעלי קרקע, יזמים או גופים שקיבלו הקצאה במסגרת טבלת איזון, ומבקשים לבחון האם ההקצאה שנקבעה עבורם משקפת את זכויותיהם באופן ראוי, שוויוני ומבוסס. ככל שלא כך, הגשת חוות דעת לצורך הגשת התנגדות לתכנית.</p>
         </div>
         <div class="audience-card animate-in delay-4">
-          <i class="fas fa-file-invoice-dollar"></i>
-          <h3>נישומים מול רשויות המס</h3>
-          <p>חברות ויחידים הניצבים מול שומות היטל השבחה, רמ"י ופיצויי הפקעה — ורוצים לחסוך</p>
+          <i class="fas fa-university"></i>
+          <h3>בנקים וקרנות אשראי</h3>
+          <p>מנהלי תיקי בטוחות ואשראי הזקוקים לתיקוף בלתי תלוי של שומות בטוחה, שווי נכסים וחשיפות אשראי.</p>
+        </div>
+        <div class="audience-card animate-in delay-5">
+          <i class="fas fa-building"></i>
+          <h3>חברות יזמיות</h3>
+          <p>מנכ״לים, CFOs ומנהלי פרויקטים המקדמים מיזמי נדל״ן — ומבקשים ודאות שמאית וכלכלית לפני קבלת החלטה.</p>
+        </div>
+        <div class="audience-card animate-in delay-6">
+          <i class="fas fa-chart-pie"></i>
+          <h3>גופי השקעה</h3>
+          <p>דירקטורים, ועדות השקעה ומנהלי סיכונים המנהלים תיקי נדל״ן ונדרשים לחוות דעת שנייה, אובייקטיבית ובלתי תלויה.</p>
         </div>
       </div>
     </div>
@@ -343,14 +452,14 @@
       <div class="cta-inner animate-in">
         <div class="cta-content">
           <h2>מוכנים לשמוע את כל הסיכויים והסיכונים?</h2>
-          <p>צרו קשר לבחינה ראשונית ללא התחייבות — ונבחן יחד כיצד ניתן להגן על הארגון ולמקסם את הוודאות הכלכלית לפני ההחלטה הגורלית.</p>
+          <p>צרו קשר לבחינה ראשונית ללא התחייבות — ונבחן יחד כיצד ניתן להגן על הארגון, לזהות חשיפות מבעוד מועד ולמקסם את הוודאות הכלכלית לפני קבלת החלטה מהותית.</p>
         </div>
         <div class="cta-actions">
           <a href="contact.html" class="btn btn-white btn-lg">
             <i class="fas fa-calendar-check"></i>
             תיאום פגישת ייעוץ
           </a>
-          <a href="tel:050-0000000" class="btn btn-outline-white btn-lg">
+          <a href="tel:054-766-3721" class="btn btn-outline-white btn-lg">
             <i class="fas fa-phone-alt"></i>
             התקשרו עכשיו
           </a>
@@ -380,15 +489,15 @@
           <h4>צור קשר</h4>
           <div class="footer-contact-item">
             <i class="fas fa-phone-alt"></i>
-            <span>050-000-0000</span>
+            <span>054-766-3721</span>
           </div>
           <div class="footer-contact-item">
             <i class="fas fa-envelope"></i>
-            <span>info@yaron-realestate.co.il</span>
+            <span>yaron.eliyahu@gmail.com</span>
           </div>
           <div class="footer-contact-item">
             <i class="fas fa-map-marker-alt"></i>
-            <span>עומר, מחוז הנגב</span>
+            <span>עומרים 15 (מבנה NEXT), עומר</span>
           </div>
           <div class="footer-contact-item">
             <i class="fas fa-clock"></i>
@@ -397,7 +506,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2024 ירון אליהו – שמאות ויעוץ מקרקעין. כל הזכויות שמורות.</span>
+        <span>© ירון אליהו – שמאות ויעוץ מקרקעין. כל הזכויות שמורות.</span>
         <span>רישיון שמאי מקרקעין: 1964</span>
       </div>
     </div>

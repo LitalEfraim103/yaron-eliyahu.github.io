@@ -98,7 +98,7 @@
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        const offset = 80; // navbar height
+        const offset = 90; // navbar height
         const top = target.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top, behavior: 'smooth' });
       }
@@ -148,6 +148,33 @@
       parent.replaceChild(fallback, this);
     });
   });
+
+  /* --- Zoom controls --- */
+  const zoomInBtn = document.getElementById('zoomIn');
+  const zoomOutBtn = document.getElementById('zoomOut');
+  const zoomLevelEl = document.getElementById('zoomLevel');
+
+  if (zoomInBtn && zoomOutBtn && zoomLevelEl) {
+    const ZOOM_STEP = 10;
+    const MIN_ZOOM = 80;
+    const MAX_ZOOM = 120;
+
+    let currentZoom = parseInt(localStorage.getItem('pageZoom') || '100', 10);
+
+    function applyZoom(zoom) {
+      currentZoom = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, zoom));
+      document.body.style.zoom = currentZoom / 100;
+      zoomLevelEl.textContent = currentZoom + '%';
+      localStorage.setItem('pageZoom', currentZoom);
+      zoomInBtn.disabled = currentZoom >= MAX_ZOOM;
+      zoomOutBtn.disabled = currentZoom <= MIN_ZOOM;
+    }
+
+    applyZoom(currentZoom);
+
+    zoomInBtn.addEventListener('click', () => applyZoom(currentZoom + ZOOM_STEP));
+    zoomOutBtn.addEventListener('click', () => applyZoom(currentZoom - ZOOM_STEP));
+  }
 
   /* --- Form field focus animation --- */
   document.querySelectorAll('.form-group input, .form-group textarea, .form-group select').forEach(field => {

@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ירון אליהו – שמאות ויעוץ מקרקעין | תיקוף ובקרת שומות וניהול סיכונים</title>
+  <meta name="description" content="ירון אליהו – שמאי מקרקעין מוסמך. תיקוף ובקרת שומות, ניהול סיכונים, שומות לבנקים ומוסדות פיננסיים. קו הגנה שני לדרג הניהולי והדירקטוריון.">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Frank+Ruhl+Libre:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* ===================================================
+       LUXURY — SHARP & BRILLIANT
+       Palette: existing blues, maximum contrast
+       =================================================== */
+
+    :root {
+      /* Your blue palette — extended into darkness and light */
+      --abyss:      #050D18;   /* near black — hero bg */
+      --deep:       #0A1929;   /* deepest navy */
+      --dark:       #0F2744;   /* dark navy */
+      --navy:       #2D4F72;   /* your --primary-darker */
+      --steel:      #4F79A4;   /* your --primary-dark */
+      --ice:        #7FB5CC;   /* your --primary — the "jewel facet" */
+      --ice-light:  #A8CCE0;
+      --sky:        #C8E0EE;
+      --frost:      #EBF4FA;
+      --white:      #FFFFFF;
+
+      /* Surfaces */
+      --bg:         #F4F8FB;
+      --bg-section: #EEF3F8;
+      --surface:    #FFFFFF;
+
+      /* Text */
+      --text-dark:  #080F1A;
+      --text-mid:   #304560;
+      --text-light: #6A8BA8;
+      --text-ghost: #9BB5CC;
+
+      /* Borders — crisp */
+      --line:       rgba(45, 79, 114, 0.14);
+      --line-mid:   rgba(45, 79, 114, 0.25);
+      --line-ice:   rgba(127, 181, 204, 0.45);
+
+      /* Shadows — sharper offset, less spread */
+      --shadow-sm:  2px 4px 12px rgba(8,15,26,0.08);
+      --shadow-md:  4px 8px 28px rgba(8,15,26,0.13);
+      --shadow-lg:  6px 16px 56px rgba(8,15,26,0.2);
+      --shadow-ice: 0 4px 24px rgba(127,181,204,0.3);
+
+      /* Sharp geometry */
+      --radius:     0px;
+      --radius-sm:  2px;
+      --radius-md:  4px;
+
+      --transition:   0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-sans:    'Heebo', 'Arial Hebrew', sans-serif;
+      --font-serif:   'Frank Ruhl Libre', 'David', Georgia, serif;
+      --max-width:    1180px;
+    }
+
+    /* ===== Reset ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.78;
+      color: var(--text-dark);
+      background: var(--white);
+      direction: rtl;
+      -webkit-font-smoothing: antialiased;
+      font-weight: 300;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { font-family: var(--font-sans); cursor: pointer; border: none; background: none; }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    section { padding: 108px 0; }
+
+    /* ===== Section Header ===== */
+    .section-header { text-align: center; margin-bottom: 68px; }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--steel);
+      margin-bottom: 18px;
+      border-right: 2px solid var(--ice);
+      padding-right: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 2.9rem;
+      font-weight: 900;
+      color: var(--deep);
+      line-height: 1.18;
+      margin-bottom: 18px;
+      letter-spacing: -0.02em;
+    }
+    .section-title .accent { color: var(--navy); }
+
+    .section-subtitle {
+      font-size: 1.02rem;
+      color: var(--text-mid);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.9;
+      font-weight: 300;
+    }
+
+    /* ===== Precision Divider ===== */
+    .sharp-divider {
+      width: 36px;
+      height: 2px;
+      background: var(--ice);
+      display: block;
+    }
+
+    /* ===== Buttons ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 36px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+      border: 2px solid transparent;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .btn-lg { padding: 17px 44px; font-size: 0.95rem; }
+    .btn-sm { padding: 10px 24px; font-size: 0.83rem; }
+
+    /* Primary: solid ice on dark backgrounds */
+    .btn-ice {
+      background: var(--ice);
+      color: var(--deep);
+      border-color: var(--ice);
+      box-shadow: var(--shadow-ice);
+    }
+    .btn-ice:hover {
+      background: var(--ice-light);
+      border-color: var(--ice-light);
+      box-shadow: 0 6px 32px rgba(127,181,204,0.45);
+      transform: translateY(-2px);
+    }
+
+    /* Solid navy — for light backgrounds */
+    .btn-navy {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+    .btn-navy:hover {
+      background: var(--dark);
+      border-color: var(--dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Outline white — on dark */
+    .btn-outline-white {
+      background: transparent;
+      color: rgba(255,255,255,0.88);
+      border-color: rgba(255,255,255,0.35);
+    }
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.09);
+      border-color: rgba(255,255,255,0.65);
+      transform: translateY(-2px);
+    }
+
+    /* Outline navy — on light */
+    .btn-outline-navy {
+      background: transparent;
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+    .btn-outline-navy:hover {
+      background: var(--navy);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* ===================================================
+       NAVIGATION
+       =================================================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      inset-inline: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+      transition: all var(--transition);
+    }
+    /* Sharp ice accent on top of nav */
+    .navbar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--navy) 0%, var(--ice) 50%, var(--navy) 100%);
+    }
+    .navbar.scrolled {
+      box-shadow: 0 4px 20px rgba(8,15,26,0.09);
+    }
+
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+    }
+
+    .navbar-logo img { height: 44px; width: auto; }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .navbar-links a {
+      position: relative;
+      padding: 8px 22px;
+      font-weight: 500;
+      font-size: 0.91rem;
+      color: var(--text-mid);
+      transition: color var(--transition);
+      letter-spacing: 0.01em;
+    }
+    .navbar-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 22px;
+      left: 22px;
+      height: 2px;
+      background: var(--ice);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform var(--transition);
+    }
+    .navbar-links a:hover,
+    .navbar-links a.active { color: var(--deep); }
+    .navbar-links a:hover::after,
+    .navbar-links a.active::after { transform: scaleX(1); }
+
+    .navbar-actions { display: flex; align-items: center; gap: 22px; }
+
+    .navbar-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.87rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      transition: color var(--transition);
+    }
+    .navbar-phone:hover { color: var(--navy); }
+    .navbar-phone i { color: var(--ice); font-size: 0.82rem; }
+
+    /* Hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--deep);
+      transition: var(--transition);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 74px;
+      inset-inline: 0;
+      background: var(--white);
+      border-bottom: 2px solid var(--ice);
+      padding: 16px 20px 20px;
+      z-index: 999;
+      box-shadow: var(--shadow-md);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block;
+      padding: 13px 0;
+      font-weight: 500;
+      color: var(--text-mid);
+      border-bottom: 1px solid var(--line);
+      transition: color var(--transition);
+    }
+    .mobile-menu a:last-of-type { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--navy); }
+    .mobile-menu .btn { width: 100%; margin-top: 14px; justify-content: center; }
+
+    /* ===================================================
+       HERO SECTION
+       =================================================== */
+    .hero {
+      min-height: 100vh;
+      background: var(--abyss);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 110px 0 80px;
+    }
+
+    /* Precise grid — like graph paper */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(127,181,204,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(127,181,204,0.05) 1px, transparent 1px);
+      background-size: 52px 52px;
+    }
+
+    /* Sharp diagonal slice — geometric, not soft */
+    .hero-slice {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 46%;
+      background: var(--dark);
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+      opacity: 0.55;
+    }
+
+    /* Brilliant ice line — the jewel facet */
+    .hero-beam {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 46%;
+      width: 2px;
+      background: linear-gradient(to bottom,
+        transparent 0%,
+        var(--ice) 20%,
+        var(--ice) 80%,
+        transparent 100%);
+      opacity: 0.6;
+      filter: blur(0.5px);
+    }
+
+    /* Dot cluster — upper corner accent */
+    .hero-dots {
+      position: absolute;
+      top: 130px;
+      left: 60px;
+      width: 100px;
+      height: 100px;
+      background-image: radial-gradient(var(--steel) 1px, transparent 1px);
+      background-size: 14px 14px;
+      opacity: 0.25;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    /* Small-caps label */
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow .bar {
+      width: 28px;
+      height: 2px;
+      background: var(--ice);
+      flex-shrink: 0;
+    }
+    .hero-eyebrow span {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ice);
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 28px;
+      letter-spacing: -0.02em;
+    }
+    /* The "jewel" accent — ice blue on black = brilliant */
+    .hero-title .text-accent {
+      color: var(--ice);
+    }
+
+    .hero-subtitle {
+      font-size: 1.04rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.92;
+      margin-bottom: 46px;
+      max-width: 510px;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 52px;
+      flex-wrap: wrap;
+    }
+
+    /* Credential strip */
+    .hero-creds {
+      display: flex;
+      gap: 0;
+      border-top: 1px solid rgba(127,181,204,0.15);
+      padding-top: 28px;
+    }
+    .hero-cred {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-left: 24px;
+      border-left: 1px solid rgba(127,181,204,0.12);
+    }
+    .hero-cred:last-child { padding-left: 0; border-left: none; }
+    .hero-cred .cred-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ice);
+      opacity: 0.7;
+    }
+    .hero-cred .cred-value {
+      font-size: 0.86rem;
+      color: rgba(255,255,255,0.7);
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    /* Hero cards — right side */
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(127,181,204,0.12);
+      border-right: 2px solid rgba(127,181,204,0.4);
+      padding: 26px 28px;
+      transition: all var(--transition);
+      position: relative;
+    }
+    .hero-card:hover {
+      background: rgba(127,181,204,0.06);
+      border-right-color: var(--ice);
+      transform: translateX(-4px);
+    }
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+    .hero-card-icon {
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(127,181,204,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ice);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+    .hero-card h3 {
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.01em;
+    }
+    .hero-card p {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.42);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+    .scroll-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.25);
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      animation: scrollBounce 2.5s infinite ease-in-out;
+    }
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateY(0); opacity: 0.3; }
+      50% { transform: translateY(6px); opacity: 0.7; }
+    }
+
+    /* ===================================================
+       PROBLEM SECTION
+       =================================================== */
+    .problem-section {
+      background: var(--white);
+      padding: 108px 0;
+    }
+
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .problem-card {
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--line-mid);
+      padding: 48px 36px;
+      transition: all var(--transition);
+      position: relative;
+    }
+    .problem-card::after {
+      content: '';
+      position: absolute;
+      top: -3px;
+      right: 0;
+      width: 0;
+      height: 3px;
+      background: var(--ice);
+      transition: width 0.45s ease;
+    }
+    .problem-card:hover {
+      border-color: var(--line-mid);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+    .problem-card:hover::after { width: 100%; }
+
+    .problem-num {
+      font-family: var(--font-serif);
+      font-size: 4.5rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 28px;
+      color: var(--frost);
+      letter-spacing: -0.04em;
+      transition: color var(--transition);
+    }
+    .problem-card:hover .problem-num { color: var(--sky); }
+
+    .problem-icon-wrap {
+      width: 46px;
+      height: 46px;
+      border: 2px solid var(--steel);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--steel);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      transition: all var(--transition);
+    }
+    .problem-card:hover .problem-icon-wrap {
+      background: var(--navy);
+      color: var(--ice);
+      border-color: var(--navy);
+    }
+
+    .problem-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--deep);
+      margin-bottom: 14px;
+      line-height: 1.35;
+    }
+    .problem-card p {
+      font-size: 0.91rem;
+      color: var(--text-mid);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    /* ===================================================
+       SOLUTION SECTION
+       =================================================== */
+    .solution-section {
+      background: var(--bg);
+      padding: 108px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .solution-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .solution-content .section-tag { display: inline-flex; margin-bottom: 16px; }
+    .solution-content .section-title { text-align: right; margin-bottom: 20px; }
+
+    .solution-text {
+      font-size: 0.97rem;
+      color: var(--text-mid);
+      line-height: 1.9;
+      margin-bottom: 16px;
+      font-weight: 300;
+    }
+
+    .solution-points {
+      margin: 26px 0 34px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--line);
+    }
+
+    .solution-point {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.91rem;
+      color: var(--text-dark);
+      font-weight: 500;
+      padding: 13px 18px;
+      border-bottom: 1px solid var(--line);
+      transition: all var(--transition);
+    }
+    .solution-point:last-child { border-bottom: none; }
+    .solution-point:hover {
+      background: var(--frost);
+      padding-right: 24px;
+    }
+    .solution-point i {
+      color: var(--ice);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      width: 16px;
+      text-align: center;
+    }
+
+    /* Diagram */
+    .solution-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .solution-diagram {
+      position: relative;
+      width: 370px;
+      height: 370px;
+    }
+    .solution-diagram::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 228px;
+      height: 228px;
+      border: 1px solid var(--line-ice);
+      border-radius: 50%;
+    }
+
+    .diagram-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 124px;
+      height: 124px;
+      background: var(--navy);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      gap: 6px;
+      font-size: 0.79rem;
+      font-weight: 700;
+      text-align: center;
+      box-shadow: 0 0 0 12px rgba(45,79,114,0.1), var(--shadow-lg);
+      z-index: 2;
+      letter-spacing: 0.02em;
+    }
+    .diagram-center i { font-size: 1.4rem; color: var(--ice); }
+
+    .diagram-item {
+      position: absolute;
+      width: 74px;
+      height: 74px;
+      background: var(--white);
+      border: 2px solid var(--steel);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      font-size: 0.70rem;
+      font-weight: 700;
+      color: var(--navy);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition);
+      z-index: 2;
+      text-align: center;
+      line-height: 1.3;
+    }
+    .diagram-item:hover {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+    .diagram-item:hover i { color: var(--ice); }
+    .diagram-item i { color: var(--steel); font-size: 0.95rem; transition: color var(--transition); }
+    .diagram-item.top    { top: 0; left: 50%; transform: translateX(-50%); }
+    .diagram-item.top:hover    { transform: translateX(-50%) scale(1.06); }
+    .diagram-item.right  { top: 50%; right: 0; transform: translateY(-50%); }
+    .diagram-item.right:hover  { transform: translateY(-50%) scale(1.06); }
+    .diagram-item.bottom { bottom: 0; left: 50%; transform: translateX(-50%); }
+    .diagram-item.bottom:hover { transform: translateX(-50%) scale(1.06); }
+    .diagram-item.left-pos { top: 50%; left: 0; transform: translateY(-50%); }
+    .diagram-item.left-pos:hover { transform: translateY(-50%) scale(1.06); }
+
+    /* ===================================================
+       STATS SECTION
+       =================================================== */
+    .stats-section {
+      background: var(--deep);
+      padding: 88px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Precise grid on dark */
+    .stats-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(127,181,204,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(127,181,204,0.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+    /* Top ice line */
+    .stats-section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--ice) 40%, var(--ice) 60%, transparent 100%);
+      opacity: 0.5;
+    }
+
+    .stats-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .stat-item {
+      padding: 52px 32px;
+      text-align: center;
+      border-left: 1px solid rgba(127,181,204,0.08);
+      transition: background var(--transition);
+    }
+    .stat-item:last-child { border-left: none; }
+    .stat-item:hover { background: rgba(127,181,204,0.04); }
+
+    /* Accent top bar on each stat */
+    .stat-bar {
+      width: 22px;
+      height: 2px;
+      background: var(--ice);
+      margin: 0 auto 20px;
+      opacity: 0.5;
+    }
+
+    .stat-icon {
+      font-size: 1rem;
+      color: var(--ice);
+      margin-bottom: 16px;
+      opacity: 0.65;
+    }
+
+    .stat-number {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: var(--ice);       /* brilliant ice on dark — the jewel effect */
+      margin-bottom: 10px;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    .stat-label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.38);
+      line-height: 1.55;
+      font-weight: 300;
+    }
+
+    /* ===================================================
+       AUDIENCE SECTION
+       =================================================== */
+    .audience-section {
+      background: var(--white);
+      padding: 108px 0;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .audience-card {
+      border: 1px solid var(--line);
+      padding: 42px 26px;
+      text-align: center;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Sharp bottom bar — grows on hover */
+    .audience-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      left: 50%;
+      height: 2px;
+      background: var(--ice);
+      transition: all 0.4s ease;
+    }
+    .audience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--line-ice);
+    }
+    .audience-card:hover::after { right: 0; left: 0; }
+
+    .audience-icon {
+      width: 58px;
+      height: 58px;
+      border: 2px solid var(--line-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: var(--steel);
+      margin: 0 auto 26px;
+      transition: all var(--transition);
+    }
+    .audience-card:hover .audience-icon {
+      background: var(--navy);
+      color: var(--ice);
+      border-color: var(--navy);
+    }
+
+    .audience-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--deep);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .audience-card p {
+      font-size: 0.86rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    /* ===================================================
+       CTA SECTION
+       =================================================== */
+    .cta-section {
+      background: var(--navy);
+      padding: 88px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Geometric accent — sharp diagonal */
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 42%;
+      background: var(--dark);
+      clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+      opacity: 0.6;
+    }
+    /* Top precision line */
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--ice);
+      opacity: 0.4;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 52px;
+    }
+
+    .cta-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .cta-eyebrow .bar { width: 24px; height: 2px; background: var(--ice); }
+    .cta-eyebrow span {
+      font-size: 0.70rem;
+      font-weight: 700;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--ice);
+      opacity: 0.8;
+    }
+
+    .cta-content h2 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .cta-content p {
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.52);
+      line-height: 1.85;
+      max-width: 500px;
+      font-weight: 300;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    /* ===================================================
+       FOOTER
+       =================================================== */
+    .footer {
+      background: var(--abyss);
+      padding: 72px 0 36px;
+      border-top: 2px solid var(--dark);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 56px;
+      margin-bottom: 52px;
+      padding-bottom: 52px;
+      border-bottom: 1px solid rgba(127,181,204,0.07);
+    }
+
+    .footer-brand img {
+      height: 40px;
+      margin-bottom: 20px;
+      filter: brightness(0) invert(1);
+      opacity: 0.65;
+    }
+    .footer-brand p {
+      font-size: 0.86rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.28);
+      font-weight: 300;
+    }
+
+    .footer-col h4 {
+      font-size: 0.70rem;
+      font-weight: 700;
+      color: var(--ice);
+      margin-bottom: 24px;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(127,181,204,0.12);
+    }
+
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.87rem;
+      font-weight: 300;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .footer-col ul li a::before {
+      content: '';
+      width: 0;
+      height: 1px;
+      background: var(--ice);
+      transition: width var(--transition);
+      flex-shrink: 0;
+    }
+    .footer-col ul li a:hover { color: rgba(255,255,255,0.7); }
+    .footer-col ul li a:hover::before { width: 14px; }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      margin-bottom: 15px;
+    }
+    .footer-contact-item i {
+      color: var(--ice);
+      font-size: 0.80rem;
+      margin-top: 4px;
+      flex-shrink: 0;
+      width: 14px;
+      text-align: center;
+      opacity: 0.6;
+    }
+    .footer-contact-item span {
+      font-size: 0.86rem;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.77rem;
+      color: rgba(255,255,255,0.18);
+      font-weight: 300;
+      letter-spacing: 0.02em;
+    }
+
+    /* ===================================================
+       ANIMATIONS
+       =================================================== */
+    .animate-in {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .animate-in.visible { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+
+    /* ===================================================
+       RESPONSIVE
+       =================================================== */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-visual { display: none; }
+      .hero-slice, .hero-beam { display: none; }
+      .hero { min-height: auto; }
+      .hero-title { font-size: 3rem; }
+      .solution-inner { grid-template-columns: 1fr; gap: 48px; }
+      .solution-visual { display: none; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .audience-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 72px 0; }
+      .container { padding: 0 1.25rem; }
+      .section-title { font-size: 2.1rem; }
+      .navbar-links, .navbar-actions { display: none; }
+      .hamburger { display: flex; }
+      .hero-title { font-size: 2.4rem; }
+      .hero-subtitle { font-size: 0.97rem; }
+      .hero-actions { flex-direction: column; gap: 12px; }
+      .hero-creds { flex-direction: column; gap: 16px; }
+      .hero-cred { border-left: none; padding-left: 0; border-top: 1px solid rgba(127,181,204,0.1); padding-top: 14px; }
+      .problems-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .audience-grid { grid-template-columns: 1fr 1fr; }
+      .cta-inner { flex-direction: column; gap: 36px; }
+      .cta-content h2 { font-size: 1.9rem; }
+      .cta-actions { flex-direction: row; flex-wrap: wrap; }
+      .footer-top { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .section-title { font-size: 1.8rem; }
+      .hero-title { font-size: 2rem; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .audience-grid { grid-template-columns: 1fr; }
+      .btn { font-size: 0.87rem; }
+      .btn-lg { padding: 15px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="luxury.html" class="navbar-logo">
+        <img src="LOGO.png" alt="ירון אליהו שמאות ויעוץ מקרקעין">
+      </a>
+      <ul class="navbar-links">
+        <li><a href="luxury.html" class="active">בית</a></li>
+        <li><a href="about.html">אודות</a></li>
+        <li><a href="services.html">שירותים</a></li>
+        <li><a href="contact.html">צור קשר</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <a href="tel:054-766-3721" class="navbar-phone">
+          <i class="fas fa-phone-alt"></i>
+          054-766-3721
+        </a>
+        <a href="contact.html" class="btn btn-navy btn-sm">תיאום פגישת ייעוץ</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="luxury.html">בית</a>
+    <a href="about.html">אודות</a>
+    <a href="services.html">שירותים</a>
+    <a href="contact.html">צור קשר</a>
+    <a href="contact.html" class="btn btn-navy">תיאום פגישת ייעוץ</a>
+  </div>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-slice"></div>
+    <div class="hero-beam"></div>
+    <div class="hero-dots"></div>
+
+    <div class="container hero-inner">
+
+      <div class="hero-content">
+        <div class="hero-eyebrow animate-in">
+          <div class="bar"></div>
+          <span>שמאות ויעוץ מקרקעין מקצועי</span>
+        </div>
+
+        <h1 class="hero-title animate-in delay-1">
+          ירון אליהו —<br>
+          <span class="text-accent">תיקוף, בקרת שומות</span><br>
+          וניהול סיכונים
+        </h1>
+
+        <p class="hero-subtitle animate-in delay-2">
+          מעניקים לדרג הניהולי והדירקטוריון קו הגנה שני, אובייקטיבי ובלתי תלוי — להשגת ודאות כלכלית ונטרול כשלים מובנים בשומות מקרקעין מורכבות.
+        </p>
+
+        <div class="hero-actions animate-in delay-3">
+          <a href="contact.html" class="btn btn-ice btn-lg">
+            <i class="fas fa-calendar-alt"></i>
+            תיאום פגישת ייעוץ
+          </a>
+          <a href="services.html" class="btn btn-outline-white btn-lg">
+            <i class="fas fa-briefcase"></i>
+            השירותים שלנו
+          </a>
+        </div>
+
+        <div class="hero-creds animate-in delay-4">
+          <div class="hero-cred">
+            <span class="cred-label">רישיון</span>
+            <span class="cred-value">שמאי מקרקעין מוסמך #1964</span>
+          </div>
+          <div class="hero-cred">
+            <span class="cred-label">תפקיד</span>
+            <span class="cred-value">שמאי ועדה מחוזית מרכז</span>
+          </div>
+          <div class="hero-cred">
+            <span class="cred-label">השכלה</span>
+            <span class="cred-value">M.B.A · בן גוריון</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card animate-in delay-1">
+          <div class="hero-card-header">
+            <div class="hero-card-icon"><i class="fas fa-search-dollar"></i></div>
+            <h3>תיקוף ובקרת שומות</h3>
+          </div>
+          <p>ביקורת עומק מתודולוגית, בחינת הנחות יסוד ומבחני רגישות על שומות קיימות</p>
+        </div>
+
+        <div class="hero-card animate-in delay-2">
+          <div class="hero-card-header">
+            <div class="hero-card-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>ניהול סיכונים</h3>
+          </div>
+          <p>הפיכת השומה ממסמך סטטי לתמצית מנהלים דינמית — סיכוי מול סיכון</p>
+        </div>
+
+        <div class="hero-card animate-in delay-3">
+          <div class="hero-card-header">
+            <div class="hero-card-icon"><i class="fas fa-university"></i></div>
+            <h3>שומות פיננסיות</h3>
+          </div>
+          <p>שומות לבנקים ומוסדות פיננסיים לפי תקן 19 לנכסים מורכבים ומגוונים</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <span>גלול</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Problem Section ===== -->
+  <section class="problem-section">
+    <div class="container">
+      <div class="section-header animate-in">
+        <div class="section-tag">האתגר הניהולי</div>
+        <h2 class="section-title">מה הסיכון שאתם נושאים?</h2>
+        <p class="section-subtitle">הסתמכות על שומה בודדת ללא תיקוף עצמאי עלולה לחשוף את הארגון לנזקים כלכליים משמעותיים ובלתי הפיכים</p>
+      </div>
+
+      <div class="problems-grid">
+        <div class="problem-card animate-in delay-1">
+          <div class="problem-num">01</div>
+          <div class="problem-icon-wrap"><i class="fas fa-exclamation-triangle"></i></div>
+          <h3>הערכות אופטימיות מדי</h3>
+          <p>שומה בודדת ללא תיקוף עלולה לכלול הנחות יסוד שגויות — ריבית לא ריאלית, עלויות בנייה חסרות, הערכת שווי מנופחת. תוצאה: החלטות השקעה שגויות שעולות במיליונים.</p>
+        </div>
+
+        <div class="problem-card animate-in delay-2">
+          <div class="problem-num">02</div>
+          <div class="problem-icon-wrap"><i class="fas fa-money-bill-wave"></i></div>
+          <h3>תשלום יתר של מיליוני שקלים</h3>
+          <p>ללא בחינה ביקורתית של שומות היטל השבחה, דרישות רמ"י ופיצויי הפקעה, הארגון עלול לשלם סכומים עצומים מיותרים עקב טעויות מתודולוגיות הניתנות לתקיפה.</p>
+        </div>
+
+        <div class="problem-card animate-in delay-3">
+          <div class="problem-num">03</div>
+          <div class="problem-icon-wrap"><i class="fas fa-eye-slash"></i></div>
+          <h3>נקודות תורפה בלתי מזוהות</h3>
+          <p>ללא עין ביקורתית מקצועית, כשלים שמאיים, בעיות נסתרות בנכס, או חולשות מתודולוגיות נשארות בלתי מזוהות — עד לאחר קבלת ההחלטה הגורלית.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Solution Section ===== -->
+  <section class="solution-section">
+    <div class="container">
+      <div class="solution-inner">
+
+        <div class="solution-content animate-in">
+          <div class="section-tag">הפתרון</div>
+          <h2 class="section-title">קו הגנה שני —<br><span class="accent">אובייקטיבי ובלתי תלוי</span></h2>
+          <p class="solution-text">סיכון אינו מילה גסה — הוא הזדמנות, כל עוד מנהלים ומבינים אותו בצורה מיטבית. אני לא מחליף את השמאי המבצע — אני מוודא שהתהליך שלו תקין, שהנחות העבודה שלו ריאליות, ומהווה עוד קו הגנה בפני מקבל ההחלטות.</p>
+          <p class="solution-text">השירות מתרגם מורכבות שמאית לתמצית מנהלים ברורה, המציגה סיכוי מול סיכון, ומאפשרת לדירקטוריון ולהנהלה לקבל החלטות מבוססות ומושכלות.</p>
+
+          <div class="solution-points">
+            <div class="solution-point">
+              <i class="fas fa-check"></i>
+              <span>ביקורת עומק מתודולוגית לשומות קיימות</span>
+            </div>
+            <div class="solution-point">
+              <i class="fas fa-check"></i>
+              <span>מבחני רגישות לשינויי ריבית, עלויות בנייה ותשואה</span>
+            </div>
+            <div class="solution-point">
+              <i class="fas fa-check"></i>
+              <span>זיהוי "דגלים אדומים" וחולשות מתודולוגיות</span>
+            </div>
+            <div class="solution-point">
+              <i class="fas fa-check"></i>
+              <span>תמצית מנהלים ברורה לדרג הדירקטוריון</span>
+            </div>
+            <div class="solution-point">
+              <i class="fas fa-check"></i>
+              <span>ניסיון רגולטורי עמוק — ועדות מחוזיות ומשרד המשפטים</span>
+            </div>
+          </div>
+
+          <a href="services.html" class="btn btn-navy">
+            לכל השירותים
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+
+        <div class="solution-visual animate-in delay-2">
+          <div class="solution-diagram">
+            <div class="diagram-center">
+              <i class="fas fa-shield-alt"></i>
+              <span>ודאות<br>כלכלית</span>
+            </div>
+            <div class="diagram-item top">
+              <i class="fas fa-search"></i><span>תיקוף</span>
+            </div>
+            <div class="diagram-item right">
+              <i class="fas fa-chart-bar"></i><span>ניתוח</span>
+            </div>
+            <div class="diagram-item bottom">
+              <i class="fas fa-flag"></i><span>דגלים<br>אדומים</span>
+            </div>
+            <div class="diagram-item left-pos">
+              <i class="fas fa-file-alt"></i><span>תמצית<br>מנהלים</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Stats Section ===== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item animate-in">
+          <div class="stat-bar"></div>
+          <div class="stat-icon"><i class="fas fa-id-card"></i></div>
+          <div class="stat-number">1964</div>
+          <div class="stat-label">מספר רישיון שמאי מקרקעין מוסמך</div>
+        </div>
+
+        <div class="stat-item animate-in delay-1">
+          <div class="stat-bar"></div>
+          <div class="stat-icon"><i class="fas fa-city"></i></div>
+          <div class="stat-number">ועדה מחוזית</div>
+          <div class="stat-label">שמאי ועדה מחוזית מרכז — לשכת התכנון. סקירה ובקרה לתוכניות איחוד וחלוקה, פינוי בינוי וכדאיות</div>
+        </div>
+
+        <div class="stat-item animate-in delay-2">
+          <div class="stat-bar"></div>
+          <div class="stat-icon"><i class="fas fa-balance-scale"></i></div>
+          <div class="stat-number">מאז 2017</div>
+          <div class="stat-label">חבר בצוות הבוחנים הרשמי של הבחינות הסופיות בשמאות מקרקעין — מועצת שמאי המקרקעין</div>
+        </div>
+
+        <div class="stat-item animate-in delay-3">
+          <div class="stat-bar"></div>
+          <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="stat-number">M.B.A</div>
+          <div class="stat-label">תואר שני במנהל עסקים מאוניברסיטת בן גוריון + לימודי ביקורת פנים</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Audience Section ===== -->
+  <section class="audience-section">
+    <div class="container">
+      <div class="section-header animate-in">
+        <div class="section-tag">קהל היעד</div>
+        <h2 class="section-title">עם מי אנחנו עובדים?</h2>
+        <p class="section-subtitle">פנייה ישירה לגורמים הנושאים באחריות ובסיכון בארגון — ורוצים שקט נפשי</p>
+      </div>
+
+      <div class="audience-grid">
+        <div class="audience-card animate-in delay-1">
+          <div class="audience-icon"><i class="fas fa-university"></i></div>
+          <h3>בנקים וקרנות אשראי</h3>
+          <p>מנהלי תיקי בטוחות ואשראי הזקוקים לתיקוף בלתי תלוי לשומות בטוחה ואשראי</p>
+        </div>
+
+        <div class="audience-card animate-in delay-2">
+          <div class="audience-icon"><i class="fas fa-building"></i></div>
+          <h3>חברות יזמיות</h3>
+          <p>מנכ"לים, CFOs ומנהלי פרויקטים המקדמים מיזמי נדל"ן — ורוצים ודאות לפני ההחלטה</p>
+        </div>
+
+        <div class="audience-card animate-in delay-3">
+          <div class="audience-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>גופי השקעה</h3>
+          <p>דירקטורים ומנהלי סיכונים המנהלים תיקי נדל"ן ונדרשים לחוות דעת שנייה ובלתי תלויה</p>
+        </div>
+
+        <div class="audience-card animate-in delay-4">
+          <div class="audience-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <h3>נישומים מול רשויות המס</h3>
+          <p>חברות ויחידים הניצבים מול שומות היטל השבחה, רמ"י ופיצויי הפקעה — ורוצים לחסוך</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA Section ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner animate-in">
+        <div class="cta-content">
+          <div class="cta-eyebrow">
+            <div class="bar"></div>
+            <span>צרו קשר</span>
+          </div>
+          <h2>מוכנים לשמוע את כל הסיכויים והסיכונים?</h2>
+          <p>צרו קשר לבחינה ראשונית ללא התחייבות — ונבחן יחד כיצד ניתן להגן על הארגון ולמקסם את הוודאות הכלכלית לפני ההחלטה הגורלית.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-ice btn-lg">
+            <i class="fas fa-calendar-check"></i>
+            תיאום פגישת ייעוץ
+          </a>
+          <a href="tel:054-766-3721" class="btn btn-outline-white btn-lg">
+            <i class="fas fa-phone-alt"></i>
+            התקשרו עכשיו
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="LOGO.png" alt="ירון אליהו שמאות מקרקעין">
+          <p>משרד שמאות מקרקעין המתמחה בתיקוף ובקרת שומות, ניהול סיכונים, ושירותי שמאות מורכבים לגופים פיננסיים, עסקיים ורשויות ציבוריות.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>ניווט מהיר</h4>
+          <ul>
+            <li><a href="luxury.html">דף הבית</a></li>
+            <li><a href="about.html">פרופיל מקצועי</a></li>
+            <li><a href="services.html">שירותי המשרד</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>צור קשר</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>054-766-3721</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>yaron.eliyahu@gmail.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>עומרים 15 (מבנה NEXT), עומר</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span>ראשון – חמישי: 9:00–18:00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© ירון אליהו – שמאות ויעוץ מקרקעין. כל הזכויות שמורות.</span>
+        <span>רישיון שמאי מקרקעין: 1964</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
